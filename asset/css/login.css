@@ -1,0 +1,175 @@
+/* ----------------------------------------------------------------
+   1. BASE STYLES & LAYOUT
+   ---------------------------------------------------------------- */
+
+* {
+    /* Use border-box for easier layout management */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Font and general text color */
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    
+    /* Background Gradient for a modern feel */
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    
+    /* Center content vertically and horizontally */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+}
+
+/* ----------------------------------------------------------------
+   2. AUTH CONTAINER (The main box for forms)
+   ---------------------------------------------------------------- */
+
+.auth-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Stronger, professional shadow */
+    width: 100%;
+    max-width: 420px; /* Optimal width for forms */
+    animation: fadeIn 0.8s ease-out; /* Simple entry animation */
+}
+
+/* Animation for smooth appearance */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Headings */
+h2 {
+    color: #007bff; /* Primary Brand Color */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+/* ----------------------------------------------------------------
+   3. FORM ELEMENTS
+   ---------------------------------------------------------------- */
+
+/* General form layout */
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block; 
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #f9f9f9;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2); /* Light halo on focus */
+    background-color: #fff;
+    outline: none;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.1s;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; 
+}
+
+input[type="submit"]:active {
+    transform: translateY(1px); /* Little press effect */
+}
+
+/* ----------------------------------------------------------------
+   4. MESSAGES AND LINKS
+   ---------------------------------------------------------------- */
+
+/* Error/Success Messages */
+.error, .success {
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.error {
+    color: #842029;
+    background-color: #f8d7da; /* Light red background */
+    border: 1px solid #f5c2c7;
+}
+
+.success {
+    color: #0f5132;
+    background-color: #d1e7dd; /* Light green background */
+    border: 1px solid #badbcc;
+}
+
+/* Bottom links (e.g., "Register here") */
+.auth-container p {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9em;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* ----------------------------------------------------------------
+   5. RESPONSIVENESS
+   ---------------------------------------------------------------- */
+/* Adjust padding on very small screens */
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+}
