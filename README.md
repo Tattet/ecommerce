@@ -1,4 +1,4 @@
-# ecommerce# E-commerce Application Documentation
+# E-commerce Application Documentation
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
